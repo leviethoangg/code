@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #5D87FF;
+    --primary-hover-color: #4f73d9;
+    --secondary-color: #49BEFF;
+    --secondary-hover-color: #3a98cc;
+    --success-color: #13DEB9;
+    --success-hover-success: #0fb294;
+    --danger-color: #FA896B;
+    --danger-hover-color: #d5745b;
+    --dark-color: #495057;
+    --dark-hover-color: #2A3547;
+}
+
+.button-primary-color {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-primary-color:hover {
+    background-color: var(--primary-hover-color);
+    color: #fff;
+}
+
+.button-secondary-color {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-secondary-color:hover {
+    background-color: var(--secondary-hover-color);
+    color: #fff;
+}
+
+.button-success-color {
+    background-color: var(--success-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-success-color:hover {
+    background-color: var(--success-hover-success);
+    color: #fff;
+}
+
+.button-danger-color {
+    background-color: var(--danger-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-danger-color:hover {
+    background-color: var(--danger-hover-color);
+    color: #fff;
+}
+
+.button-dark-color {
+    background-color: var(--dark-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.button-dark-color:hover {
+    background-color: var(--dark-hover-color);
+    color: #fff;
+}

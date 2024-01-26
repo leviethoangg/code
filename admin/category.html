@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Danh Mục</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div class="d-flex flex-nowrap">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary shadow-lg" style="width: 280px;height: 100vh">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32">
+            </svg>
+            <span class="fs-4 text-uppercase">Đồng hồ</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+                <a href="#" class="nav-link link-body-emphasis">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-speedometer2 mr-2"></i>
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="nav-link link-body-emphasis">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-clock mr-2"></i>
+                    </svg>
+                    Đồng hồ
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-body-emphasis">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-bag-check mr-2"></i>
+                    </svg>
+                    Đơn hàng
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link active ">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-grid mr-2"></i>
+                    </svg>
+                    Danh mục
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+               data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>Tài khoản</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Quản Lý Danh Mục</h2>
+
+        <!-- Thêm Danh Mục Mới -->
+        <button class="btn button-primary-color mb-3" data-toggle="modal" data-target="#addCategoryModal">Thêm Danh Mục Mới</button>
+
+
+        <!-- Bảng Danh Mục -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên Danh Mục</th>
+                <th>Mô Tả</th>
+                <th>Hành Động</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Rolex Submariner</td>
+                <td>Luxury</td>
+                <td class="border-bottom-0">
+                    <button class="btn button-success-color" style="padding: 5px 10px">Edit</button>
+                    <button class="btn button-danger-color" style="padding: 5px 10px">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Thêm Danh Mục -->
+    <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="addCategoryModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCategoryModalLabel">Thêm Danh Mục Mới</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addCategoryForm">
+                        <div class="form-group">
+                            <label for="categoryName">Tên Danh Mục</label>
+                            <input type="text" class="form-control" id="categoryName">
+                        </div>
+                        <div class="form-group">
+                            <label for="categoryDescription">Mô Tả</label>
+                            <textarea class="form-control" id="categoryDescription"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

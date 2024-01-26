@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="d-flex flex-nowrap">
+    <!--    Sidebar-->
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary shadow-lg" style="width: 280px;height: 100vh">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32">
+            </svg>
+            <span class="fs-4 text-uppercase">Đồng hồ</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+                <a href="#" class="nav-link link-body-emphasis">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-speedometer2 mr-2"></i>
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="nav-link active">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-clock mr-2"></i>
+                    </svg>
+                    Đồng hồ
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link link-body-emphasis">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-bag-check mr-2"></i>
+                    </svg>
+                    Đơn hàng
+                </a>
+            </li>
+            <li>
+                <a href="category.html" class="nav-link link-body-emphasis">
+                    <svg class="bi pe-none me-2" width="16" height="16">
+                        <i class="bi bi-grid mr-2"></i>
+                    </svg>
+                    Danh mục
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+               data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>Tài khoản</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow">
+                <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <!-- Create New Item -->
+        <div class="mb-4">
+            <button class="btn button-primary-color" data-toggle="modal" data-target="#addItemModal">Add New Item
+            </button>
+        </div>
+
+        <!-- Items Table -->
+        <div class="table-responsive">
+            <table class="table text-nowrap mb-0 align-middle">
+                <thead class="text-dark fs-4">
+                <tr>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Id</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Ảnh</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Tên</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Hãng</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Danh mục</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Mô tả</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Giá</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Sale (%)</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Hành động</h6>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
+                    <td class="border-bottom-0">
+                        <img style="width: 100px;height: 100px"
+                             src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                             alt="">
+                    </td>
+                    <td class="border-bottom-0">
+                        <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
+<!--                        <span class="fw-normal">Đồng hồ Thụy Sĩ</span>-->
+                    </td>
+
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">Elite Admin</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-primary rounded-3 fw-semibold">Đồng hồ Nam</span>
+                        </div>
+                    </td>
+                    <td class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0 fs-4">Đồng hồ đến từ Thụy Sĩ</h6>
+                    </td>
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">1.000.000.000</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">10</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <button class="btn button-success-color" style="padding: 5px 10px">Edit</button>
+                        <button class="btn button-danger-color" style="padding: 5px 10px">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6></td>
+                    <td class="border-bottom-0">
+                        <img style="width: 100px;height: 100px"
+                             src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                             alt="">
+                    </td>
+                    <td class="border-bottom-0">
+                        <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
+<!--                        <span class="fw-normal">Đồng hồ Thụy Sĩ</span>-->
+                    </td>
+
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">Elite Admin</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-success rounded-3 fw-semibold">Đồng hồ Nữ</span>
+                        </div>
+                    </td>
+                    <td class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0 fs-4">Đồng hồ đến từ Thụy Sĩ</h6>
+                    </td>
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">1.000.000.000</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">10</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <button class="btn button-success-color" style="padding: 5px 10px">Edit</button>
+                        <button class="btn button-danger-color" style="padding: 5px 10px">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border-bottom-0"><h6 class="fw-semibold mb-0">3</h6></td>
+                    <td class="border-bottom-0">
+                        <img style="width: 100px;height: 100px"
+                             src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                             alt="">
+                    </td>
+                    <td class="border-bottom-0">
+                        <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
+                        <!--                        <span class="fw-normal">Đồng hồ Thụy Sĩ</span>-->
+                    </td>
+
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">Elite Admin</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-warning rounded-3 fw-semibold">Đồng hồ đôi</span>
+                        </div>
+                    </td>
+                    <td class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0 fs-4">Đồng hồ đến từ Thụy Sĩ</h6>
+                    </td>
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">1.000.000.000</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <p class="mb-0 fw-normal">10</p>
+                    </td>
+                    <td class="border-bottom-0">
+                        <button class="btn button-success-color" style="padding: 5px 10px">Edit</button>
+                        <button class="btn button-danger-color" style="padding: 5px 10px">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<!-- Add Item Modal -->
+<div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addItemModalLabel">Add New Item</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label for="itemName">Name</label>
+                        <input type="text" class="form-control" id="itemName" required placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemImage">Image</label>
+                        <input type="file" class="form-control" id="itemImage">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemBrand">Brand</label>
+                        <input type="text" class="form-control" id="itemBrand" required placeholder="Enter brand">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemCategory">Category</label>
+                        <select class="form-control" id="itemCategory" required>
+                            <option value="">Select a category</option>
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Brand</label>
+                        <textarea type="text" class="form-control" id="itemDescription"
+                                  placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Price</label>
+                        <input type="number" class="form-control" id="itemPrice" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="itemSale">
+                        <label class="form-check-label" for="itemSale">On Sale</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="salePercentage">Sale Percentage</label>
+                        <input type="number" class="form-control" id="salePercentage"
+                               placeholder="Enter sale percentage" min="0" max="100">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="itemHotProduct">
+                        <label class="form-check-label" for="itemHotProduct">Hot Product</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
